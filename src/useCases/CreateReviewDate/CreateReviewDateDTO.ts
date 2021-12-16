@@ -2,6 +2,6 @@ export interface ICreateReviewDateRequestDTO {
     name: string
     phone: number
     modelCar: string
-    lincensePlate: string
+    licensePlate: string
     reviewDate: Date
 }

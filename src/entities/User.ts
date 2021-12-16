@@ -6,7 +6,7 @@ export class User {
     public name: string
     public phone: number
     public modelCar: string
-    public lincensePlate: string
+    public licensePlate: string
     public reviewDate: Date
 
     constructor(props: Omit<User, 'id'>, id?: string ){
