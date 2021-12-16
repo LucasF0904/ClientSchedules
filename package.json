@@ -1,0 +1,15 @@
+{
+  "name": "ClientSchedules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LucasF0904/ClientSchedules.git",
+  "author": "Lucas Davi Ferreira de Faria",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
