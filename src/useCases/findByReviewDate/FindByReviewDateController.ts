@@ -1,16 +1,14 @@
-import { Request, Response} from 'express'
-import { CreateReviewDateUseCase } from './CreateReviewDateUseCase';
+import { Request } from 'express'
+import { FindByReviewDateUseCase } from './FindByReviewDateUseCase'
 
-export class CreateReviewDateController {
+export class FindByReviewDateController {
     constructor(
-        private createReviewDateUseCase: CreateReviewDateUseCase,
+        private findByReviewDateUseCase: FindByReviewDateUseCase,
     ){}
-
     async handle(request: Request, response: Response): Promise<Response> {
-        const { name, phone, reviewDate, modelCar, licensePlate } = request.body
-
+        const { reviewDate, name, phone, modelCar, licensePlate } = request.body
         try{
-            await this.createReviewDateUseCase.execute({
+            await this.findByReviewDateUseCase.execute({
                 name,
                 phone,
                 reviewDate,
@@ -19,7 +17,7 @@ export class CreateReviewDateController {
             })
             return response.status(201).send()
         }
-        catch (err) {
+        catch(err) {
             return response.status(400).json({
                 message: err.message || 'Unexpected error'
             })

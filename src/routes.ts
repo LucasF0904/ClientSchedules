@@ -3,8 +3,13 @@ import { createReviewDateController } from './useCases/CreateReviewDate'
 
 const router = Router()
 
-router.post("/users", (request, response ) => {
+router.post("/reviewDate", (request, response ) => {
     return createReviewDateController.handle(request, response)
 })
+
+router.post("/findByReviewDate", (request, response ) => {
+    return createReviewDateController.handle(request, response)
+})
+
 
 export { router }
